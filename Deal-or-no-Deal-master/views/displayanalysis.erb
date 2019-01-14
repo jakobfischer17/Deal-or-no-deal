@@ -1,0 +1,20 @@
+<div class="well well-sm">
+
+<h2>Welcome to Deal or no Deal!</h2>
+<p>Play deal or no deal here.</p>
+<br>
+<% for i in (0..21) do %>
+ <% s = "_" %>
+ <% g = "_" %>
+ <% b = i + 1 %>
+ <% if $webgame.openedboxes[i] == 0 %>
+  <%= s = "Closed" %>
+  <%= g = "[#{b}]" %>
+ <% else %>
+  <%= s = "Opened" %>
+  <%= g = "[#{b}]" %>
+ <% end %>
+<% end %>
+
+
+</div>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--The general code and styling from this layout was from https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h-->
+  <title>DOND Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <!--these settings are a version of the CSS reset setting. Developed byhttps://necolas.github.io/normalize.css/-->
+  <link rel="stylesheet" type="text/css" href="Normalize.css"/> 
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">
+              <img src ="https://gabebernal.files.wordpress.com/2011/04/dond_logo.png" style="width:100px;height:30px;" class="img-rounded"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/highscores">Highscores</a></li>
+            <li><% if $webgame.chosenbox != 0 && $webgame.chosenbox != nil%>
+                <a href="/continue">Continue</a>
+                
+            <li><a href="/displayanalysis">Display Analysis</a></li>
+            <% end %></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+               <% if $credentials %>
+               <!--#This line checks if the credential is not nil, plus if it is equal to an exact username-->
+                    <% if $credentials[0] != ' ' %>
+                        <li><a href="/new"><span class="glyphicon glyphicon-gbp"></span>New</a></li>
+                        <li><a href="/user/<%= $credentials[0] %>">Logged in as <b><%= $credentials[0] %></b></a></li>
+                        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        <% if $credentials[0] == "Admin" %>
+                            <li><a href="/admincontrols"><span class="glyphicon glyphicon-user"></span> Admin Controls</a></li>
+                        <% end %>
+                    <% else %>
+                        <li><a href="/login"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                    <% end %>
+                <% else %>
+                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    
+    <div class="row">
+
+
+    <div class=" col-md-3 rigthbase">
+
+
+
+    </div>
+
+    <div class="col-md-6 middlebase">
+      <div class="well-lg"> 
+          <div class="view_content">
+              <%= yield %>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-3 lastcolumn">
+
+    </div>
+  </div>
+
+
+  <footer class="col-md-8 col-md-offset-2">
+      <p><span class="glyphicon glyphicon-copyright-mark"> </span> Jakob Fischer (5773261), Maksim Lilchev (51773600)  & Chidozie Nnachor (51773318) 2018 </p></footer>
+
+    
+</body>
+</html>

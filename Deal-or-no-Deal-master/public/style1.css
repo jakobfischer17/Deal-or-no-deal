@@ -1,0 +1,22 @@
+/*https://www.w3schools.com/css/css3_buttons.asp*/
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: 2px solid #008CBA;
+    color: #4CAF50;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #f44336; /* Green */
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: grab;
+} 

@@ -1,0 +1,45 @@
+Admin logged in at 2018-03-22 19:42:39 +0000
+Admin logged out at 2018-03-22 19:42:43 +0000
+Maksim logged in at 2018-03-22 19:43:02 +0000
+Maksim logged out at 2018-03-22 19:43:09 +0000
+Admin logged in at 2018-03-22 19:43:11 +0000
+Admin logged out at 2018-03-22 19:43:30 +0000
+Maksim logged in at 2018-03-22 19:43:41 +0000
+Maksim viewed this file at 2018-03-22 19:43:45 +0000
+Maksim logged out at 2018-03-22 19:44:22 +0000
+Chidozie logged in at 2018-03-22 19:44:54 +0000
+Chidozie logged out at 2018-03-22 19:45:11 +0000
+Jakob logged in at 2018-03-22 19:45:28 +0000
+Jakob logged out at 2018-03-22 19:45:52 +0000
+Admin logged in at 2018-03-22 19:45:58 +0000
+Admin logged out at 2018-03-22 19:46:09 +0000
+Chidozie logged in at 2018-03-22 19:46:18 +0000
+Chidozie logged out at 2018-03-22 19:46:33 +0000
+Admin logged in at 2018-03-22 19:48:13 +0000
+Admin logged in at 2018-03-22 19:51:26 +0000
+Admin logged out at 2018-03-22 19:51:29 +0000
+Admin logged in at 2018-03-22 20:00:30 +0000
+Maksim logged in at 2018-03-22 20:22:10 +0000
+Maksim won by opening his own box: 500.0
+Maksim logged out at 2018-03-22 20:23:06 +0000
+Jakob logged in at 2018-03-22 20:23:12 +0000
+Jakob logged out at 2018-03-22 20:23:17 +0000
+Admin logged in at 2018-03-22 20:23:24 +0000
+Admin logged out at 2018-03-22 20:23:42 +0000
+Jakob logged in at 2018-03-22 20:23:59 +0000
+Jakob won by opening his own box: 5.0
+Jakob logged out at 2018-03-22 20:25:16 +0000
+Admin logged in at 2018-03-22 20:26:17 +0000
+Admin logged out at 2018-03-22 20:26:24 +0000
+Jakob logged in at 2018-03-22 20:26:31 +0000
+Jakob won by taking a deal: 4200
+Jakob won by taking a deal: 4200
+Chidozie logged in at 2018-03-22 20:28:07 +0000
+Chidozie won by opening his own box: 1000.0
+Chidozie logged out at 2018-03-22 20:29:33 +0000
+Admin logged in at 2018-03-22 20:29:37 +0000
+Admin won by taking a deal: 15700
+Admin logged out at 2018-03-22 20:30:46 +0000
+Admin logged in at 2018-03-22 20:30:52 +0000
+Admin viewed this file at 2018-03-22 20:30:55 +0000
+Admin logged out at 2018-03-22 20:32:51 +0000

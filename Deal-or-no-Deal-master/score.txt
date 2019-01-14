@@ -1,0 +1,6 @@
+Maksim : 500.0
+Jakob : 5.0
+Jakob : 4200
+Jakob : 4200
+Chidozie : 1000.0
+Admin : 15700

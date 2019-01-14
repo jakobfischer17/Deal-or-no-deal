@@ -1,0 +1,27 @@
+
+<div class="well well-sm">
+
+<%= "Your opened box contained: #{$webgame.sequence[$webgame.input-1]}" %>
+<h2>At this point, there is only one unopened box left!</h2>
+<p>As you have already taken a deal, find below the amount you would have won had you opened your own box instead!  </p>
+<p>Your chosen box: <%= $webgame.chosenbox %></p><br>
+<p>Log: <%= $webgame.selectedboxes %> </p>
+<br>
+<% for i in (0..21) do %>
+			<% g = "_" %>
+			<% b = i + 1 %>
+			<% if $webgame.openedboxes[i] == 0 %>
+				<% g = "[#{b}]" %>
+				<% if b == $webgame.chosenbox %>
+					<% g = "*#{b}*" %>
+				<% end %>
+			<% else %>
+				<% g = "\\#{b}/" %>
+			<% end %>
+		<%= "#{g} " %>
+	<% end %>
+<br><br>
+<h1><%= $webgame.webdisplaychosenboxvalue %> </h1>
+<br><p>Click on "New" to play another round!</p>
+
+</div>

@@ -1,0 +1,116 @@
+/*    CSS settings for the button glow and pulse taken from https://ianlunn.github.io/Hover/    */
+
+
+/*Sets the colour for the Navigation Bar*/
+.navbar { background-color: #4e443c;
+
+}
+
+
+/*sets the features foe the body element*/
+body {
+        font-family: 'Ubuntu', serif;
+        font-size: 14px;
+        background-color: #FBBC05;
+      }
+
+
+footer {
+  border-top: solid 1px #d8d7cf;
+  color: #692E05;
+  padding: 20px 0 40px 0;
+  clear: both;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+
+h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 0;
+
+    border-bottom: 3px solid blue;
+}
+
+.rigthbase, .middlebase, .lastcolumn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.rigthbase {
+  border-left: solid 1px #d8d7cf;
+  color: white;
+  min-height: 600px;
+  
+}
+
+
+.well-lg {
+  background-image: url('background.jpg');
+  background-color: white;
+  background-size: 100%;;
+  min-height: 600px;
+  color: Blue;
+  
+}
+
+.well-sm {
+  background-color: rgba(255,255,200,.8);
+}
+
+.openboxes {
+  position: relative;
+}
+
+
+.openboxes .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    -ms-transform: translate(-50%, -30%);
+    background-color: #692E05;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow .btn {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(3px) translateZ(-1px);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+ 
+}
+.hvr-pulse-grow .btn:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  animation-name: hvr-pulse-grow;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

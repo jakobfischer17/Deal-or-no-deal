@@ -1,0 +1,35 @@
+
+<div class="well well-sm">
+
+
+<h3>You have reached the final stage of the game! Either accept the banker offer or open your box!</h3>
+<p>Your chosen box: <%= $webgame.chosenbox %></p><br>
+<p>Log: <%= $webgame.selectedboxes %> </p>
+<% $webgame.amounts.each do |elem| %>
+    <%=elem %>
+<% end %>
+<br>
+<% for i in (0..21) do %>
+			<% g = "_" %>
+			<% b = i + 1 %>
+			<% if $webgame.openedboxes[i] == 0 %>
+				<% g = "[#{b}]" %>
+				<% if b == $webgame.chosenbox %>
+					<% g = "*#{b}*" %>
+				<% end %>
+			<% else %>
+				<% g = "\\#{b}/" %>
+			<% end %>
+		<%= "#{g} " %>
+	<% end %>
+<br>
+<p><%= "Your chosen box contained: #{$webgame.sequence[$webgame.input-1]}" %></p><br>
+<p><%= $webgame.webbankerphoneswithoffer %></p>
+<form method="get" action="/takefinaldeal" class="btn">
+    <button type="submit" class="btn btn-success">Take Deal</button>
+</form>
+<form method="get" action="/openchosenbox" class="btn">
+    <button type="submit" class="btn btn-primary">Open your own box</button>
+</form>
+
+</div>

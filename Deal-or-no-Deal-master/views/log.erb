@@ -1,0 +1,26 @@
+
+
+<div class="well well-sm">
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Log of activities</th>
+           
+        </tr>
+    </thead> 
+    
+    <tbody>
+        <% @logfile.each do |line| %>
+        <tr>
+            <td><%= line %></td>
+            
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<form method="get" action="/logreset" class="form-group">
+    <button type="submit" class="btn btn-danger">Reset logfile</button>
+</form>
+
+</div>

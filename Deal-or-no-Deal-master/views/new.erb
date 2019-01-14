@@ -1,0 +1,37 @@
+
+<div class="well well-sm">
+
+<h2>Welcome to Deal or no Deal!</h2>
+<p>Play deal or no deal here.</p><br>
+<p>Choose your box by entering a number between 1 and 22 please!</p>
+
+
+<span>Amounts left in the game:</span> <br>
+<% $webgame.amounts.each do |elem| %>
+    <%=elem %>
+<% end %>
+<br>
+<br>
+<span>Boxes status:</span><br>
+<% for i in (0..21) do %>
+			<% g = "_" %>
+			<% b = i + 1 %>
+			<% if $webgame.openedboxes[i] == 0 %>
+				<% g = "[#{b}]" %>
+				<% if b == $webgame.chosenbox %>
+					<% g = "*#{b}*" %>
+				<% end %>
+			<% else %>
+				<% g = "\\#{b}/" %>
+			<% end %>
+		<%= "#{g} " %>
+	<% end %>
+	<br>
+
+	<!--Displays a form which is used to set the chosenbox variable with a JavaScript ensuring the number is between 1 and 22-->
+<form action="/displaychosenbox" method="post" name="myForm1" onsubmit= "return validateForm1()" class="form-group">
+ <input type="number" name="message" class="form-control">
+ <input type="submit" value="Submit" class="btn btn-success">
+ </form>
+
+</div>

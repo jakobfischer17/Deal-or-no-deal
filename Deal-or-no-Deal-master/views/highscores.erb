@@ -1,0 +1,25 @@
+<div class="well well-sm">
+
+    <h2>Highscores (Top 5)</h2>
+
+<table class="table">
+  <caption>Below are the Highscores</caption>
+  <thead>
+   <tr>
+    <th>Player: Score</th>
+   
+   </tr>
+  </thead
+  
+ 
+  <tbody>
+  <% $highscores.each do |line| %>
+   <tr>
+    <td><%= line %></td>
+    
+   </tr>
+  </tbody>
+  <% end %>
+ </table>
+
+</div>

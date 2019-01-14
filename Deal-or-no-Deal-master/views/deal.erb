@@ -1,0 +1,283 @@
+<div class="well well-sm">
+
+	<h2>You took the deal!</h2><br>
+<p>You can continue opening boxes until there is no box left to see what you could have gotten.</p>
+<br><br>
+<p>Open a box by entering a number between 1 and 22 please!</p>
+<p>Your chosen box: <%= $webgame.chosenbox %></p><br>
+<p>Log: <%= $webgame.selectedboxes %> </p>
+<% $webgame.amounts.each do |elem| %>
+    <%=elem %>
+<% end %>
+<br>
+<% for i in (0..21) do %>
+			<% g = "_" %>
+			<% b = i + 1 %>
+			<% if $webgame.openedboxes[i] == 0 %>
+				<% g = "[#{b}]" %>
+				<% if b == $webgame.chosenbox %>
+					<% g = "*#{b}*" %>
+				<% end %>
+			<% else %>
+				<% g = "\\#{b}/" %>
+			<% end %>
+		<%= "#{g} " %>
+	<% end %>
+<br>
+<% if $webgame.openedboxes.count(0) == 2 %>
+	<% redirect '/oneboxleftdeal' %>
+<% end %>
+
+</div>
+
+<!--Displays all unopened boxes as a button-->
+<div class="row">
+	
+	<% if $webgame.openedboxes[0] == 0 && 1 != $webgame.chosenbox %>
+	<div class="openboxes col-md-2 hvr-pulse-grow">
+		  <img src="box.png" alt="">
+		<form action="/deal" method="post">
+			<input type="hidden" name="_method" value="put">
+			<button class="btn" type="submit" name="message" value="1">1</button>
+		</form>
+	</div>
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[1] == 0 && 2 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		  	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="2">2</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[2] == 0 && 3 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="3">3</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[3] == 0 && 4 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="4">4</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[4] == 0 && 5 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="5">5</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+		
+	<% if $webgame.openedboxes[5] == 0 && 6 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="6">6</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[6] == 0 && 7 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="7">7</button>
+			</form>
+		</div> 	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[7] == 0 && 8 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="8">8</button>	
+			</form>
+		</div> 	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[8] == 0 && 9 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="9">9</button>
+			</form>
+		</div> 	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[9] == 0 && 10 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+		 	<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="10">10</button>
+			</form>
+		</div> 	
+	<% else %>
+	<% end %>
+	
+		
+	<% if $webgame.openedboxes[10] == 0 && 11 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="11">11</button>
+			</form>
+		</div>
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[11] == 0 && 12 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="12">12</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[12] == 0 && 13 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="13">13</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[13] == 0 && 14 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="14">14</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[14] == 0 && 15 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="15">15</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	
+	
+	<% if $webgame.openedboxes[15] == 0 && 16 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="16">16</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[16] == 0 && 17 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="17">17</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[17] == 0 && 18 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="18">18</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[18] == 0 && 19 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="19">19</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[19] == 0 && 20 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="20">20</button>
+			</form>
+		</div>	
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[20] == 0 && 21 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="21">21</button>
+			</form>	
+	</div>
+	<% else %>
+	<% end %>
+	
+	<% if $webgame.openedboxes[21] == 0 && 22 != $webgame.chosenbox %>
+		<div class="openboxes col-md-2 hvr-pulse-grow">
+			<img src="box.png" alt="">
+			<form action="/deal" method="post">
+				<input type="hidden" name="_method" value="put">
+				<button class="btn" type="submit" name="message" value="22">22</button>
+			</form>	
+	</div>
+	<% else %>
+	<% end %>
+
+
+</div>
