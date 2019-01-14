@@ -1,6 +1,6 @@
 # Deal-or-no-Deal
-In collaboration with https://github.com/MLilchev
-My second university project created with Ruby and Sinatra for the web version.
+
+My second university project created with Ruby and Sinatra for the web version, in collaboration with https://github.com/MLilchev.
 This project was initially hosted on BitBucket, since GitHub did not offer private repos until recently. This is a re-upload, the work was done in March 2018.
 
 # Instructions to run the game: 
